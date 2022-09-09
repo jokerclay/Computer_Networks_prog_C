@@ -53,6 +53,45 @@ int listen(int sockfd, int backlog);
 ```
 
 
+4. **accept a connection request**
+    * transition of connection request from `listen()` method to an actual Socket
+     means "accept the connection request"
+    * after accepting the request (and automatic creation of socket), the data
+    can be finally transferrd between the nodes.
+
+```C
+#include <sys/socket.h>
+int accept(int sockfd struct sockaddr *addr, socklen_t *addrlen);
+```
+
+
+**sequece**
+    - step 1: creating the socket (socket function call)
+    - step 2: bind the socket to a port (bind function call)
+    - step 3: listen for incoming connection requests and identify ones(listen function call)
+    - step 4: accept the identified connection request and open the socket(accept function call)
+
+
+5. **connect**
+    * attempting to establish a connection (requesting to connect)
+    * it's like dialing to a specific phone number 
+    * the implementatioin of requesting to a connect is very simple, unlike listening & accepting a socket .
+    * to make a connection requestm just specify the address to connect to and the socket descriptor to attach the socket to .
+
+```C
+#include <sys/socket.h>
+int accept(int sockfd struct sockaddr *server_addr, socklen_t *addrlen);
+```
+
+
+
+
+
+
+
+
+
+
 
 
 
