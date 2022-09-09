@@ -4,14 +4,15 @@
  *           fopen("my_file.txt", "r")
  *                      |          |
  *                      V          V
- *                 file path      stream mode
+ *                 file path      mode string
  *                              ("w" "w+" "r" ...)
  *
  *          return a pointer to a FILE struct
  *          Use that pointer as a handle to access the file
  *          (means use fread(), fwrite(), fprtinf(), feof(), fclose() ect...)
+ *          fopen come from the C standard library 
  *
- *      2. open()
+ *
  *
  */
 
@@ -22,12 +23,8 @@
 int main (void)  {
 
 
-    FILE *file_to_read = fopen("read_file.txt", "r");
-    FILE *file_to_write = fopen("write_file.txt", "w");
-
-
-    char str[] = "ONE DAY\n";
-    fwrite(str, 1, sizeof(str), file_to_write);
+    FILE *file_to_read = fopen("read_file_1.txt", "r");
+    FILE *file_to_write = fopen("write_file_1.txt", "w");
 
 
     if (file_to_read == NULL || file_to_write == NULL) {
