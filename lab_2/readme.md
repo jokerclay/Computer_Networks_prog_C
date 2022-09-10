@@ -208,8 +208,53 @@ int main(void) {
 }
 ```
 
+###File descriptor and socket
+    * the simliarity between the file and socket 
+      * Both socket and file descriptors are in the same number sequence
+        this confirms that linux I/O considers socket and files the same
 
-###File 
+##Socket
+```c
+
+int socketfd = socket(domain, type, protocol)
+
+```
+
+### Protocols
+    * What is Protocol ? 
+      * Network protocol are formal stardands and policies comprised of rules
+        procedures and formats that define communication between two or more 
+        devices over network
+      * it needs to be specified to create a socket
+        (socket need to know the protocol type)
+      * it's like a detailed deal between two people about communication 
+        or understanding each other 
+      * The both parties can communicate with each other using the agreed terms
+        and conditions
+
+
+```c
+#include <sys/socket.h>
+int socket(int domain, int type, int protocol)
+                |           |           |
+                V           V           V
+
+```
+    * Domain, Type, Protocol
+      * Socket domain
+        * PF_XXXX -> Protocol Family Internet
+            * PF_INET = Protocol Family Internet(IPv4)
+            * PF_INET6 = Protocol Family Internet(IPv6)
+        * SF_XXXX -> Address Family 
+         (each address family supports multiple protocol families)
+            * AF_INET = Address Family Internet(IPv4)
+            * AF_INET6 = Address Family Internet(IPv6)
+
+
+
+
+
+
 
 
 
