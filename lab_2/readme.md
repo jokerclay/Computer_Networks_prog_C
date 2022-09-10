@@ -10,13 +10,13 @@
     * File Descriptor (fd)
       * Operating system files are created (and socket) simply as numbers
         (to be able easily distinguish them)
-      * Low-level file input and output function requires a file discriptor 
+      * Low-level file input and output function requires a file descriptor 
         for the perpose of making I/O operations.
       * Both socket & file have input and output stream 
         (socket being more advanced than file)
-        socket discriptor can be used simply as a file discriptor as well  
+        socket descriptor can be used simply as a file descriptor as well  
 
-- File open and close 
+- File open and close
     * use open system call to read and write a file `open()`
     ```c
     #include <stdio.h>
@@ -71,7 +71,7 @@ int main(void) {
         printf("ERROR: can not open data.txt\n");
     }
 
-    printf("file discriptor is : %d \n", fd);
+    printf("file descriptor is : %d \n", fd);
 
     /*
      *
@@ -116,7 +116,7 @@ int main(void) {
         printf("ERROR: can not open data.txt\n");
     }
 
-    printf("file discriptor is => %d \n", fd);
+    printf("file descriptor is => %d \n", fd);
 
     /*
      *
@@ -207,3 +207,11 @@ int main(void) {
     return 0;
 }
 ```
+
+
+###File 
+
+
+
+
+
