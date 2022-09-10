@@ -1,0 +1,4 @@
+Hey !
+this is the data in data.txt file, and this data is alreay exist bofore
+the program are execused
+testing ....

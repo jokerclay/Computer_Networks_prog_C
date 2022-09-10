@@ -16,6 +16,11 @@ int main(void)
         printf("can not open %s\n" , FILE_PATH);
     }
 
+    /*
+     * you can not write data to a file which is opned in read mode
+     * it can't change the data in data.txt file 
+     *
+     */
     char sentence[] = "this is an example in the reading mode ";
 
     fwrite(sentence, sizeof(sentence), 1, file);
@@ -25,3 +30,5 @@ int main(void)
 
     return 0;
 }
+
+
